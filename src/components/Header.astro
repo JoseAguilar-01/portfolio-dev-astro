@@ -1,0 +1,35 @@
+---
+import { profile } from "@assets/images";
+import { Image } from "astro:assets";
+import Code from "./icons/Code.astro";
+---
+
+<header class="container md:w-[720px] mx-auto md:mt-28 mb-20">
+  {
+    (
+      <Image
+        src={profile}
+        alt="profile.jpg"
+        class="rounded-full mb-5"
+        height={200}
+        width={200}
+        loading={"eager"}
+      />
+    )
+  }
+  <div class="flex items-center gap-2 mb-[30px]">
+    <Code />
+    <h1 class="text-5xl font-extrabold">Jose Aguilar</h1>
+  </div>
+
+  <p class="text-2xl text-balance text-gray-300">
+    No soy una AI, <span class="text-blue-400"
+      >soy un desarrollador Full Stack</span
+    > apasionado por el
+    <span class="text-orange-400"
+      >desarrollo y ejecución de proyectos con gran impacto</span
+    >.
+  </p>
+</header>
+
+<style></style>

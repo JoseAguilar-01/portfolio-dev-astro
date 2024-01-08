@@ -1,0 +1,94 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import Skill from "./Skill.astro";
+import SkillIcon from "./icons/Skill.astro";
+import Typescript from "./icons/Typescript.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Node from "./icons/Node.astro";
+import Express from "./icons/Express.astro";
+import Vitest from "./icons/Vitest.astro";
+import Cypress from "./icons/Cypress.astro";
+import NextJS from "./icons/NextJS.astro";
+import AstroIcon from "./icons/Astro.astro";
+import React from "./icons/React.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import NoteBook from "./icons/NoteBook.astro";
+import Angular from "./icons/Angular.astro";
+---
+
+<SectionContainer className="mb-20 flex flex-col gap-[30px]">
+  <article>
+    <div class="flex items-center gap-2 mb-5">
+      <SkillIcon />
+      <h2 class="text-[40px] font-extrabold">Habilidades</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-4 gap-[10px]">
+      <Skill>
+        <Typescript />
+        <p>Typescript</p>
+      </Skill>
+      <Skill>
+        <JavaScript />
+        <p>JavaScript</p>
+      </Skill>
+      <Skill>
+        <Node />
+        <p>NodeJS</p>
+      </Skill>
+      <Skill>
+        <Express />
+        <p>Express</p>
+      </Skill>
+      <Skill>
+        <Vitest />
+        <p>Vitest</p>
+      </Skill>
+      <Skill>
+        <Cypress />
+        <p>Cypress</p>
+      </Skill>
+      <Skill>
+        <Tailwind />
+        <p>Tailwind</p>
+      </Skill>
+    </div>
+  </article>
+  <article>
+    <div class="flex items-center gap-2 mb-5">
+      <SkillIcon />
+      <h2 class="text-[40px] font-extrabold">Especialidad</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-4 gap-[10px]">
+      <Skill>
+        <React />
+        <p>React</p>
+      </Skill>
+      <Skill>
+        <NextJS />
+        <p>NextJS</p>
+      </Skill>
+      <Skill>
+        <AstroIcon />
+        <p>Astro</p>
+      </Skill>
+    </div>
+  </article>
+
+  <article>
+    <div class="flex items-center gap-2 mb-5">
+      <NoteBook />
+      <h2 class="text-[40px] font-extrabold">En Formación</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-4 gap-[10px]">
+      <Skill>
+        <Angular />
+        <p>Angular</p>
+      </Skill>
+    </div>
+  </article>
+</SectionContainer>
+
+<style></style>

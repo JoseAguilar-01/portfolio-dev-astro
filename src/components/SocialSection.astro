@@ -1,0 +1,30 @@
+---
+import At from "./icons/At.astro";
+import Github from "./icons/Github.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import SectionContainer from "./SectionContainer.astro";
+import SocialLink from "./SocialLink.astro";
+---
+
+<SectionContainer className="mb-20">
+  <div class="flex items-center gap-2 mb-[30px]">
+    <At />
+    <h2 class="text-[40px] font-extrabold">Social</h2>
+  </div>
+
+  <div class="flex items-center gap-[15px]">
+    <SocialLink href="https://github.com/JoseAguilar-01">
+      <Github />
+      Github
+    </SocialLink>
+
+    <SocialLink
+      href="https://www.linkedin.com/in/jose-gregorio-aguilar-d-vicente-b83876240"
+    >
+      <LinkedIn />
+      LinkedIn
+    </SocialLink>
+  </div>
+</SectionContainer>
+
+<style></style>

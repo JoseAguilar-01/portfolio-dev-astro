@@ -1,0 +1,40 @@
+---
+import type { Props } from "@interfaces/MailButton";
+
+const { href, id, tooltipID, tooltipText } = Astro.props;
+---
+
+{
+  href ? (
+    <a
+      id={id}
+      href={href}
+      class="px-4 py-2 group/copy relative text-black bg-blue-400 rounded-lg flex justify-center items-center w-[130px]"
+    >
+      <slot />
+
+      <span
+        id={tooltipID}
+        class="absolute top-0 left-[50%] -translate-x-[50%] -translate-y-12 px-4 py-2 rounded-xl bg-white text-black w-[125px] transition-all duration-200 ease-out opacity-0 group-hover/copy:opacity-100 text-center"
+      >
+        {tooltipText}
+      </span>
+    </a>
+  ) : (
+    <button
+      id={id}
+      class="px-4 py-2 group/copy relative text-black bg-blue-400 rounded-lg flex justify-center items-center w-[130px]"
+    >
+      <slot />
+
+      <span
+        id={tooltipID}
+        class="absolute top-0 left-[50%] -translate-x-[50%] -translate-y-12 px-4 py-2 rounded-xl bg-white text-black w-[125px] transition-all duration-200 ease-out opacity-0 group-hover/copy:opacity-100 text-center"
+      >
+        {tooltipText}
+      </span>
+    </button>
+  )
+}
+
+<style></style>

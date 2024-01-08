@@ -1,0 +1,6 @@
+/.vscode
+/.astro_font
+/node_modules
+
+.gitignore
+package-lock.json

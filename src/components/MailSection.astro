@@ -1,0 +1,70 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import Mail from "./icons/Mail.astro";
+import Send from "./icons/Send.astro";
+import Copy from "./icons/Copy.astro";
+import MailButton from "./MailButton.astro";
+---
+
+<SectionContainer className="mb-20">
+  <article>
+    <div class="flex items-center gap-2 mb-5">
+      <Mail />
+      <h2 class="text-[40px] font-extrabold">Email</h2>
+    </div>
+
+    <div class="flex flex-wrap md:flex-nowrap items-center gap-3">
+      <input
+        disabled
+        id="email"
+        class="text-lg w-full px-4 py-2 border-2 bg-slate-900 border-slate-700 rounded-xl col-span-10"
+        value="jose.aguilar.developer@gmail.com"
+      />
+      <div class="flex mx-auto items-center gap-3">
+        <MailButton
+          href="mailto:jose.aguilar.developer@gmail.com"
+          tooltipText="Enviar Email"
+        >
+          <Send />
+        </MailButton>
+        <MailButton
+          id="copy-button"
+          tooltipID="tooltip-copy-email"
+          tooltipText="Copiar Email"
+        >
+          <Copy />
+        </MailButton>
+      </div>
+    </div>
+  </article>
+</SectionContainer>
+
+<style></style>
+
+<script>
+  const copyButton = document.getElementById("copy-button");
+  const tooltip = document.getElementById("tooltip-copy-email");
+
+  const showTooltipText = (text: string) => {
+    if (!tooltip) return;
+
+    tooltip.innerHTML = text;
+  };
+
+  const copyEmail = () => {
+    const inputEmail = document.getElementById("email") as HTMLInputElement;
+
+    inputEmail.select();
+    inputEmail.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(inputEmail.value);
+
+    showTooltipText("Copiado");
+  };
+
+  copyButton?.addEventListener("click", copyEmail);
+
+  tooltip?.addEventListener("mouseleave", () =>
+    showTooltipText("Copiar email"),
+  );
+</script>

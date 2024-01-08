@@ -1,0 +1,15 @@
+---
+import type { Props } from "@interfaces/SocialLink";
+
+const { href } = Astro.props;
+---
+
+<a
+  class="col-span-2 md:col-span-1 border-2 bg-slate-900 border-slate-700 rounded-2xl p-4 text-center text-lg md:text-xl font-bold flex items-center justify-center gap-2 transition hover:border-slate-600 min-w-[155px] duration-200"
+  target="_blank"
+  href={href}
+>
+  <slot />
+</a>
+
+<style></style>

@@ -1,0 +1,29 @@
+---
+import { project_example } from "@assets/images";
+import Project from "./Project.astro";
+import SectionContainer from "./SectionContainer.astro";
+import Star from "./icons/Star.astro";
+---
+
+<SectionContainer className="mb-20">
+  <div class="flex items-center gap-2">
+    <Star />
+    <h2 class="text-[40px] font-extrabold">Proyectos</h2>
+  </div>
+
+  <Project
+    title="Project"
+    description="Description of the project"
+    image={{ src: project_example, alt: "" }}
+    codeLink=""
+    link=""
+    tags={[
+      {
+        text: "Next.js",
+        color: "blue",
+      },
+    ]}
+  />
+</SectionContainer>
+
+<style></style>

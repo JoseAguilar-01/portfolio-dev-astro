@@ -1,0 +1,56 @@
+---
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+import type { Props } from "@interfaces/MainLayout";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Porfolio donde muestro una breve descripción de mi perfil como desarrollador Full Stack, mis habilidades, proyectos de exhibición y métodos de contacto."
+    />
+    <meta name="author" content="Jose Gregorio Aguilar D'Vicente" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="título de tu página o tu post" />
+    <meta
+      property="og:description"
+      content="Porfolio donde muestro una breve descripción de mi perfil como desarrollador Full Stack, mis habilidades, proyectos de exhibición y métodos de contacto."
+    />
+    <meta property="og:image" content="/favicon.svg" />
+    <meta property="og:url" content="permalink" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <GoogleFontsOptimizer
+      url='https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet'
+    />
+    <title>{title}</title>
+  </head>
+
+  <body class="relative h-full w-full bg-slate-950 dark:text-gray-200">
+    <Navbar />
+
+    <div
+      class="fixed bottom-0 z-[-2] w-full h-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_125%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    >
+    </div>
+
+    <main class="px-4 md:px-0">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <style is:global>
+      body {
+        font-family: "Lato", sans-serif;
+        font-display: swap;
+      }
+    </style>
+  </body>
+</html>
