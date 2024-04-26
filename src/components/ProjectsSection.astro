@@ -1,29 +1,101 @@
 ---
-import { project_example } from "@assets/images";
-import Project from "./Project.astro";
-import SectionContainer from "./SectionContainer.astro";
-import Star from "./icons/Star.astro";
+import { guitarLA, uptask, uptaskLogin } from '@assets/images';
+import Project from './Project.astro';
+import SectionContainer from './SectionContainer.astro';
+import Star from './icons/Star.astro';
+import NextJS from './icons/NextJS.astro';
+import React from './icons/React.astro';
+import Tag from './Tag.astro';
+import Typescript from './icons/Typescript.astro';
+import JavaScript from './icons/JavaScript.astro';
+import Supabase from './icons/Supabase.astro';
+import Tailwind from './icons/Tailwind.astro';
+import Node from './icons/Node.astro';
+import Express from './icons/Express.astro';
+import Vite from './icons/Vite.astro';
+import MongoDB from './icons/MongoDB.astro';
+import Strapi from './icons/Strapi.astro';
 ---
 
-<SectionContainer className="mb-20">
-  <div class="flex items-center gap-2">
-    <Star />
-    <h2 class="text-[40px] font-extrabold">Proyectos</h2>
-  </div>
+<SectionContainer className="mb-20" id="projects">
+	<div class="flex items-center gap-2">
+		<Star />
+		<h2 class="text-[40px] font-extrabold">Proyectos</h2>
+	</div>
 
-  <Project
-    title="Project"
-    description="Description of the project"
-    image={{ src: project_example, alt: "" }}
-    codeLink=""
-    link=""
-    tags={[
-      {
-        text: "Next.js",
-        color: "blue",
-      },
-    ]}
-  />
+	<div class="grid gap-[35px]">
+		<Project
+			title="GuitarLA"
+			description="Ecommerce de guitarras. El mismo también posee un blog con varios post relacionados a dicho instrumento musical."
+			image={{ src: guitarLA, alt: 'GuitarLA-website' }}
+			codeLink="https://github.com/JoseAguilar-01/GuitarLA-Next"
+			link="https://guitarla-ecommerce.vercel.app"
+		>
+			<Tag text="NextJS" color="gray">
+				<NextJS />
+			</Tag>
+
+			<Tag text="Typescript" color="blue">
+				<Typescript />
+			</Tag>
+
+			<Tag text="Supabase" color="green">
+				<Supabase />
+			</Tag>
+
+			<Tag text="Strapi" color="blue">
+				<Strapi />
+			</Tag>
+		</Project>
+
+		<Project
+			title="UpTask"
+			description="Esta app está pensada para el manejo, gestión y planificación de cualquier tipo de proyectos que se quiera llevar a cabo por 1 o más personas en conjunto."
+			image={{ src: uptask, alt: 'UpTask-app' }}
+			codeLink="https://github.com/JoseAguilar-01/UpTask-Frontend-2023"
+			link="https://up-task-frontend-2023.vercel.app"
+		>
+			<Tag text="React.js" color="blue">
+				<React />
+			</Tag>
+
+			<Tag text="Vite" color="indigo">
+				<Vite />
+			</Tag>
+
+			<Tag text="JavaScript" color="yellow">
+				<JavaScript />
+			</Tag>
+
+			<Tag text="TailwindCSS" color="blue">
+				<Tailwind />
+			</Tag>
+		</Project>
+
+		<Project
+			title="UpTask (Backend)"
+			description="Rest API desarrollada específicamente para la app UpTask"
+			image={{ src: uptaskLogin, alt: 'UpTask-login' }}
+			codeLink="https://github.com/JoseAguilar-01/UpTask-Backend-2023"
+			link="https://up-task-frontend-2023.vercel.app"
+		>
+			<Tag text="Node.js" color="blue">
+				<Node />
+			</Tag>
+
+			<Tag text="Express.js" color="indigo">
+				<Express />
+			</Tag>
+
+			<Tag text="JavaScript" color="yellow">
+				<JavaScript />
+			</Tag>
+
+			<Tag text="MongoDB" color="blue">
+				<MongoDB />
+			</Tag>
+		</Project>
+	</div>
 </SectionContainer>
 
 <style></style>

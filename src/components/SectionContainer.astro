@@ -1,11 +1,11 @@
 ---
-import type { Props } from "@interfaces/SectionContainer";
+import type { Props } from '@interfaces/SectionContainer';
 
-const { className } = Astro.props;
+const { className, id } = Astro.props;
 ---
 
-<section class={`w-full md:w-[720px] container mx-auto ${className}`}>
-  <slot />
+<section class={`w-full md:w-[720px] container mx-auto ${className}`} id={id}>
+	<slot />
 </section>
 
 <style></style>

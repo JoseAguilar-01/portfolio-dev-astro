@@ -1,7 +1,4 @@
-import type { JsxElement } from "typescript";
-
 export interface Props {
   text: string;
-  icon?: JsxElement;
-  color?: "gray" | "blue" | "green";
+  color?: "gray" | "blue" | "green" | "yellow" | "indigo";
 }
